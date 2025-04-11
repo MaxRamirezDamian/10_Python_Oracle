@@ -22,7 +22,7 @@ conn = oracledb.connect(
 
 # Crear cursor y ejecutar una consulta de prueba
 cursor = conn.cursor()
-cursor.execute("SELECT * FROM SYSTEM.CUSTOMER")
+cursor.execute("SELECT * FROM SYSTEM.PRODUCTOS")
 
 
 # Obtener y mostrar los registros
@@ -33,7 +33,7 @@ if rows:
     for row in rows:
         print(row)  # Imprime cada fila de la tabla
 else:
-    print("No hay registros en la tabla CUSTOMER.")
+    print("No hay registros en la tabla PRODUCTOS.")
 
 
 # Cerrar cursor y conexión

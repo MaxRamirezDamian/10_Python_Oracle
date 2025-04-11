@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://silver-guide-449w56p7667fq64p-5000.app.github.dev", 
   "dependencies": {
     "@tailwindcss/vite": "^4.1.0",
     "@testing-library/dom": "^10.4.0",
@@ -12,14 +13,15 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-scripts": "5.0.1",
+    "router-dom": "^3.0.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "build:css": "tailwindcss build src/styles.css -o dist/styles.css",
-    "watch:css": "tailwindcss build src/styles.css -o dist/styles.css --watch",
+    "build:css": "tailwindcss build dist/styles.css -o dist/output.css",
+    "watch:css": "tailwindcss build dist/styles.css -o dist/output.css --watch",
     "postinstall": "npm run build:css",
     "prestart": "npm run build:css",
     "eject": "react-scripts eject"
